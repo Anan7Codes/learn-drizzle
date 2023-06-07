@@ -1,0 +1,26 @@
+{
+  "name": "learn-drizzleorm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsx watch -r dotenv/config index.ts",
+    "introspect": "drizzle-kit introspect:pg --config=drizzle.config.ts",
+    "generate": "drizzle-kit generate:pg --out migrations-folder --schema schema.ts --config=drizzle.config.ts",
+    "migrate": "tsx -r dotenv/config migrate.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.1.4",
+    "drizzle-orm": "^0.26.5",
+    "postgres": "^3.3.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.2.5",
+    "drizzle-kit": "^0.18.1",
+    "tsx": "^3.12.7"
+  }
+}
